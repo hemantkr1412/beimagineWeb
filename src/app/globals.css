@@ -7,6 +7,24 @@
   --pinkish-purple: #913ac4;
 }
 
+.layer2 {
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+.colortheme-stability {
+  background-image: linear-gradient(109deg, #7a26ae, #3d649b 98.5%);
+}
+
+.iconcolor {
+  fill: #8EC5FC;
+  fill: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.colortheme-difference {
+  background-image: linear-gradient(110deg, #5052a1 2.34%, #24aeb8 99.94%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
