@@ -1,7 +1,13 @@
-import HomePage from "@/Components/Home/Home"
+
+// import ActionAreaCard from "@/Components/Home/Stability";
+
+import HomePage from "@/Components/Home/Home";
+
+
 
 export default function Home() {
   return (
-    <HomePage />
+    // <ActionAreaCard/>
+    <HomePage/>
   )
 }
