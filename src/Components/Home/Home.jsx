@@ -9,7 +9,8 @@ import Vision from '../Vision/Vision';
 import ActionAreaCard from './Stability';
 import Layer from './Layer';
 import Difference from './Difference';
-import Video from './VideoYT'
+import Video from './VideoYT';
+import Team from '../Team/Team';
 
 const contentBox = {
     height: '100%',
@@ -61,6 +62,7 @@ const HomePage = () => {
             <Layer />
             <Difference />
             <Video />
+            <Team />
         </>
     )
 }
