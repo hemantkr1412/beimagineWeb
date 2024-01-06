@@ -1,5 +1,10 @@
 :root {
-  --lightGrey: #FCFCFC;
+  --bgColor: #0E0E0E;
+  --footerBg: #000000;
+  --darkGrey: #F1F1F2;
+  --softGreen: #71c391;
+  --lightSteelBlue: #6492cc;
+  --pinkish-purple: #913ac4;
 }
 
 * {
@@ -15,7 +20,8 @@ body {
 }
 
 body {
-  background-color: var(--lightGrey);
+  background-color: var(--bgColor);
+  color: white;
 }
 
 a {

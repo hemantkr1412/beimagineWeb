@@ -25,7 +25,7 @@ const imgContainer = {
 
 const Home = () => {
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{pt:4}}>
             <Grid item xs={7} sx={{ height: '100vh' }}>
                 <Box sx={contentBox}>
                     <Typography variant="h3" gutterBottom>

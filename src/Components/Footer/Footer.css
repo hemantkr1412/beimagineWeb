@@ -1,0 +1,43 @@
+.footerDiv {
+    padding: 1rem !important;
+    background: var(--footerBg);
+    margin-top: 6rem;
+}
+
+#footerImg:hover {
+    animation: scaleup(0.2s);
+    transform: scale(1.1);
+    transition: ease 0.4s all;
+}
+
+.footerIcons {
+    border-radius: 50%;
+    color: white;
+    margin: 0 0 0 2.5rem;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.copyrightText {
+    color: #9497A1;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 1rem;
+    background: var(--footerBg);
+}
+
+@media only screen and (max-width : 600px) {
+    .footerDiv {
+        padding: 0 !important;
+    }
+
+    #footerLogo {
+        text-align: center !important;
+    }
+
+    #footerIcons {
+        text-align: center !important;
+        display: block !important;
+        margin-top: 1rem;
+    }
+}
