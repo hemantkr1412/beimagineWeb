@@ -1,0 +1,103 @@
+/* ContentSlider.css */
+.content-slider {
+    position: relative;
+    max-width: 90%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.content-box {
+    flex: 0 0 32%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.content-box:hover {
+    transform: scale(1.1);
+}
+
+.content-box:hover .image {
+    opacity: 0.3;
+}
+
+.visibility-icon {
+    display: none;
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content-box:hover .visibility-icon {
+    display: block;
+}
+
+.title {
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.paragraph {
+    margin-top: 10px;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.prev-button {
+    left: -25px;
+}
+
+.next-button {
+    right: -25px;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-content {
+    animation: fadeInOut 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    .content-box {
+        flex: 0 0 105%;
+        margin: 10px 0;
+    }
+}
