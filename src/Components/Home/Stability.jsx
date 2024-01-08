@@ -10,7 +10,8 @@ const title = {
   display: 'flex',
   justifyContent: 'center',
   fontSize: '3.5rem',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  marginTop: '10%'
 }
 const subTitle = {
   display: 'flex',

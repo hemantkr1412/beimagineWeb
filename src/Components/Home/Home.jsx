@@ -11,6 +11,7 @@ import Layer from './Layer';
 import Difference from './Difference';
 import Video from './VideoYT';
 import Team from '../Team/Team';
+import ContentSlider from '../Portfolio/ContentSlider';
 
 const contentBox = {
     height: '100%',
@@ -58,6 +59,7 @@ const HomePage = () => {
                 </Grid>
             </Grid >
             <Vision />
+            <ContentSlider/>
             <ActionAreaCard />
             <Layer />
             <Difference />
