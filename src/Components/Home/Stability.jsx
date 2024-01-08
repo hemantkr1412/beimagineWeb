@@ -6,45 +6,21 @@ import { Button, CardActionArea, Box } from '@mui/material';
 import { AdjustTwoTone, AlbumTwoTone, AddCircleOutlineTwoTone, AdsClickTwoTone, CatchingPokemonTwoTone, CameraTwoTone } from '@mui/icons-material';
 import '../../app/globals.css'
 
-const title = {
-  display: 'flex',
-  justifyContent: 'center',
-  fontSize: '3.5rem',
-  fontWeight: 'bold'
-}
-const subTitle = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  textAlign: 'center',
-  fontSize: '1rem',
-  wordSpacing: '1px',
-  color: 'grey',
-  marginBottom: '4%'
-}
 const allcards = {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
   gap: '15px',
   marginLeft: '10%',
-  marginRight: '10%'
+  marginRight: '10%',
+  marginBottom: '4rem'
 }
-const cardStyle = {
-  color: 'white',
-  Width: '60px',
-  height:'45vh',
-  display: 'flex',
-  borderRadius: '10px',
-  justifyItems: 'center',
-  border: "none",
-  marginTop: '5%'
-}
+
 const imgStyle = {
-  width: '180px',
-  height: '80px',
-  display: 'flex',
-  marginLeft: '26%'
+  transform: 'scale(2)',
+  margin: '1rem auto',
+  color: 'white'
 }
+
 const cardTitle = {
   color: 'white',
   display: 'flex',
@@ -52,25 +28,12 @@ const cardTitle = {
   fontSize: '1.5rem',
   fontWeight: 'bold'
 }
+
 const cardcontent = {
   color: 'white',
   fontSize: '1.1rem',
   wordSpacing: '1px',
   textAlign: 'center'
-}
-const buttonbox = {
-  display: 'flex',
-  justifyContent: 'center',
-  marginTop: '5%',
-  marginBottom: '5%'
-}
-const explorebutton = {
-  color: 'black',
-  backgroundColor: 'white',
-  "&:hover": {
-    color: 'white',
-    backgroundColor: 'black'
-  }
 }
 
 const cardData = [
@@ -108,41 +71,37 @@ const cardData = [
 
 const ActionAreaCard = () => {
   return (
-
     <Box>
-      <Typography sx={title}>
-        eiusmod tempor incididunt
-      </Typography>
-      <Box sx={subTitle}>
-        <Typography >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore,
-        </Typography>
-        <Typography> Excepteur sint occaecat cupidatat non proident</Typography>
-      </Box>
+      <Typography variant="h2" sx={{ textAlign: 'center' }}>Use cases</Typography>
+      <Typography
+        variant="body1"
+        sx={{
+          width: '40%',
+          margin: 'auto',
+          textAlign: 'center',
+          mt: 3, mb: 5
+        }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, labore iure consectetur soluta quibusdam consequatur veniam dolorum atque</Typography>
 
       <Box sx={allcards}>
         {cardData.map((card, index) => (
-          <Card key={index} sx={cardStyle} className='colortheme-stability'>
-            <CardActionArea >
-              {card.imageSrc}
-              <CardContent>
-                <Typography sx={cardTitle} gutterBottom variant="h5" component="Box">
-                  {card.title}
-                </Typography>
-                <Typography sx={cardcontent} variant="body2" color="text.secondary">
-                  {card.content}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+          <Card
+            key={index}
+            sx={{ py: 4, textAlign: 'center' }}
+            className='colortheme-stability'
+          >
+            {card.imageSrc}
+            <CardContent>
+              <Typography sx={cardTitle} gutterBottom variant="h5" component="Box">
+                {card.title}
+              </Typography>
+              <Typography sx={cardcontent} variant="body2" color="text.secondary">
+                {card.content}
+              </Typography>
+            </CardContent>
           </Card>
         ))}
       </Box>
-
-      <Box sx={buttonbox}>
-        <Button sx={explorebutton}>Explore</Button>
-      </Box>
     </Box>
-
   );
 }
 

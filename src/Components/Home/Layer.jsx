@@ -55,6 +55,7 @@ const buttonbox = {
     marginTop: '25px',
     gap: '50px'
 }
+
 const bitbutton = {
     color: 'white',
     border: '1px solid #fff',

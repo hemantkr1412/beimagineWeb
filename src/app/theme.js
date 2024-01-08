@@ -8,6 +8,17 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          border: '1px solid #bdbdbd',
+          borderRadius: '4px',
+          // '& label.Mui-focused': {
+          //   border: '#f44336',
+          // },
+        },
+      },
+    },
     MuiButton: {
       variants: [
         {

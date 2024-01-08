@@ -11,6 +11,7 @@ import Layer from './Layer';
 import Difference from './Difference';
 import Video from './VideoYT';
 import Team from '../Team/Team';
+import Contact from '../Contact/Contact';
 
 const contentBox = {
     height: '100%',
@@ -33,7 +34,7 @@ const imgContainer = {
 const HomePage = () => {
     return (
         <>
-            <Grid container spacing={2} sx={{pt:4}}>
+            <Grid container spacing={2} sx={{ pt: 4 }}>
                 <Grid item xs={7} sx={{ height: '100vh' }}>
                     <Box sx={contentBox}>
                         <Typography variant="h3" gutterBottom>
@@ -63,6 +64,7 @@ const HomePage = () => {
             <Difference />
             <Video />
             <Team />
+            <Contact />
         </>
     )
 }

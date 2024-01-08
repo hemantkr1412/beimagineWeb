@@ -5,17 +5,18 @@ import {
     CardMedia,
     CardContent
 } from "@mui/material";
+3
 
-const sectionStyle={
-    margin:'6rem 0'
+const sectionStyle = {
+    margin: '6rem 0'
 }
 
 const Team = () => {
     return (
         <section style={sectionStyle}>
             <Typography variant='h2' sx={{
-                textAlign:'center',
-                my:4
+                textAlign: 'center',
+                my: 4
             }}>Our Team</Typography>
             <Grid container spacing={5} sx={{ p: 5 }}>
                 {
