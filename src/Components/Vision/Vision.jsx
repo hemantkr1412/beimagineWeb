@@ -15,7 +15,7 @@ const Vision = () => {
 				container
 				spacing={8}
 				justifyContent="center"
-				sx={{ marginBottom:'6rem' }}>
+				sx={{ marginBottom:'12rem' }}>
 				<Grid item xs={12} sm={2} md={1} lg={2}
 					sx={{ display: { xs: "none", md: "block" } }}>
 				</Grid>
