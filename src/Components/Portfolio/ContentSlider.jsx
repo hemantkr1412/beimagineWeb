@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import { VisibilityOutlined, KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
+import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import { Typography } from '@mui/material';
 import './ContentSlider.css';
 

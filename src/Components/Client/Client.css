@@ -1,0 +1,32 @@
+.clients {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-box {
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    height: 40vh;
+}
+
+.image{
+    width: 80%;
+
+}
+

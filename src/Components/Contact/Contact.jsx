@@ -9,7 +9,7 @@ import './Contact.css';
 const Contact = () => {
     return (
         <>
-            <Typography variant='h3' sx={{ textAlign: 'center' }}>Feel free to reach out to us</Typography>
+            <Typography variant='h3' sx={{ textAlign: 'center', marginTop:'5%' }}>Feel free to reach out to us</Typography>
             <Grid container>
                 <Grid xs={4}></Grid>
                 <Grid xs={4}>
