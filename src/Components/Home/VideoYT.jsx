@@ -6,6 +6,7 @@ const title = {
     fontSize: '3rem',
     fontWeight: 'bold'
 }
+
 const titlebox = {
     display: 'flex',
     alignItems: 'center',
@@ -13,25 +14,26 @@ const titlebox = {
     flexDirection: 'column',
     marginBottom: '5%'
 }
+
 const videoAndcontent = {
     display: 'flex',
     gap: '3%'
 }
+
 const contentbox = {
     display: 'flex',
     flexDirection: 'column',
     width: '50%'
 }
+
 const contenticon = {
     display: 'flex',
     marginTop: '25px'
 }
-const icon = {
-    width: '10%'
-}
-const content = {
-    fontSize: '1.1rem'
-}
+
+const icon = { width: '10%' }
+
+const content = { fontSize: '1.1rem' }
 
 const data = [
     { content: 'Duis aute irure dolor' },

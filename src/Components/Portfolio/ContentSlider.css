@@ -4,6 +4,7 @@
     max-width: 90%;
     display: flex;
     margin: auto;
+    margin-bottom: 8rem;
 }
 
 .slider-container {
@@ -35,7 +36,7 @@
 }
 
 .content-box:not(.large):hover {
-    transform: scale(1);
+    transform: scale(0.9);
 }
 
 /* .visibility-icon {
