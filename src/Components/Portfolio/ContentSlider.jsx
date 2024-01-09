@@ -42,7 +42,7 @@ const ContentSlider = () => {
 
     const handleNext = () => {
         setStartIndex((prevStartIndex) =>
-            prevStartIndex + 3 >= contentData.length ? 0 : prevStartIndex + 1
+            prevStartIndex + 3 >= contentData.length ? 0 : prevStartIndex  + 1
         );
     };
 
@@ -54,7 +54,7 @@ const ContentSlider = () => {
                 </button>
                 <div className="slider-container">
                     {contentData.slice(startIndex, startIndex + 3).map((content, index) => (
-                        <a target="_blank" key={index} href={content.url} className={`content-box ${index === 1 ? 'large' : ''} `}>
+                        <a target="_blank" key={index} href={content.url} className='content-box'>
                             <h1 className='title'>{content.title}</h1>
                             <img className='image' src={content.image} alt={`Slide ${startIndex + index + 1}`} />
                             <Typography className='paragraph'>{content.paragraph}</Typography>
