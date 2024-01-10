@@ -66,8 +66,8 @@ const HomePage = () => {
             <Layer />
             <Difference />
             <Video />
-            <Team />
             <Client/>
+            <Team />
             <Contact />
         </>
     )
