@@ -13,7 +13,7 @@ import Video from './VideoYT';
 import Team from '../Team/Team';
 import Contact from '../Contact/Contact';
 import ContentSlider from '../Portfolio/ContentSlider';
-import Client from '../Client/Client';
+import ClientContainer from '../Client/ClientContainer';
 
 const contentBox = {
     height: '100%',
@@ -66,7 +66,7 @@ const HomePage = () => {
             <Layer />
             <Difference />
             <Video />
-            <Client/>
+            <ClientContainer/>
             <Team />
             <Contact />
         </>
