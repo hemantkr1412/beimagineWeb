@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Slide } from 'react-reveal';
 import './Client.css';
 
-const Client = ({images}) => {
+const Client = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handleNext = () => {
@@ -12,7 +12,7 @@ const Client = ({images}) => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             handleNext();
-        }, 5000);
+        }, 2000);
 
         return () => clearInterval(intervalId);
     }, [currentIndex]);
@@ -20,10 +20,9 @@ const Client = ({images}) => {
     return (
         <>
             <div className='clients'>
-                
                 <div className="image-container">
-                    {images.map((image, index) => (
-                    
+                    {
+                        images.map((image, index) => (
                             <div className='image-box'>
                                 <Slide left>
                                     <img
@@ -33,7 +32,8 @@ const Client = ({images}) => {
                                     />
                                 </Slide>
                             </div>
-                    ))}
+                        ))
+                    }
                 </div>
             </div>
         </>

@@ -14,7 +14,8 @@
 }
 
 .colortheme-stability {
-  background-image: linear-gradient(109deg, #7a26ae, #3d649b 98.5%);
+  /* background-image: linear-gradient(109deg, #7a26ae, #3d649b 98.5%); */
+  background-image: linear-gradient(189deg, #263646, #0A0D12 98.5%);
 }
 
 .iconcolor {
@@ -46,6 +47,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  margin:auto 0;
 }
 
 img {

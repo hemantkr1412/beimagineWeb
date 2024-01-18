@@ -10,7 +10,7 @@ import "./Vision.css";
 const Vision = () => {
 	return (
 		<>
-			<div id="vision"></div>
+			<div id="about"></div>
 			<Grid
 				container
 				spacing={8}
@@ -75,7 +75,7 @@ const Vision = () => {
 							}}
 							gutterBottom
 							id="aboutInfo">
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius dignissimos ea alias itaque officiis sequi nesciunt ipsam facere quasi rem libero et voluptate odio, architecto suscipit perspiciatis veritatis, repudiandae fugiat quam. Libero placeat laudantium iste eius accusantium commodi quam sit. Libero placeat laudantium iste eius accusantium commodi quam sit.
+							Our vision is to pioneer the next frontier of technological evolution by designing revolutionary blockchain-based products. We are committed to crafting solutions that transcend imagination, addressing real-world challenges with innovation, transparency, and a commitment to creating lasting positive impact.
 						</Typography>
 					</Box>
 				</Grid>

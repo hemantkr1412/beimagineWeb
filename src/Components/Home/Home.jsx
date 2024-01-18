@@ -6,13 +6,14 @@ import {
     Button
 } from '@mui/material';
 import Vision from '../Vision/Vision';
-import ActionAreaCard from './Stability';
+// import ActionAreaCard from './Stability';
+import UseCases from '../UseCases/UseCases';
 import Layer from './Layer';
 import Difference from './Difference';
 import Video from './VideoYT';
 import Team from '../Team/Team';
 import Contact from '../Contact/Contact';
-import ContentSlider from '../Portfolio/ContentSlider';
+import ProjectPortfolio from '../ProjectPortfolio/ProjectPortfolio';
 import ClientContainer from '../Client/ClientContainer';
 
 const contentBox = {
@@ -36,15 +37,15 @@ const imgContainer = {
 const HomePage = () => {
     return (
         <>
-            <Grid container spacing={2} sx={{ pt: 4 }}>
+            <Grid container spacing={2} sx={{marginTop:'-4rem'}}>
                 <Grid item xs={7} sx={{ height: '100vh' }}>
                     <Box sx={contentBox}>
-                        <Typography variant="h3" gutterBottom>
+                        {/* <Typography variant="h3" gutterBottom>
                             Sustainable Growth
                             with Blockchain
-                        </Typography>
+                        </Typography> */}
                         <Typography variant="h6" gutterBottom>
-                            We ideate, develop, deploy and maintain blockchain technology solutions for start-ups, enterprises, and government.
+                        Our vision is to pioneer the next frontier of technological evolution by designing revolutionary blockchain-based products. We are committed to crafting solutions that transcend imagination, addressing real-world challenges with innovation, transparency, and a commitment to creating lasting positive impact.
                         </Typography>
                         <Button variant='contained' sx={{ mt: 2 }}>Learn more</Button>
                     </Box>
@@ -60,9 +61,9 @@ const HomePage = () => {
                     </Box>
                 </Grid>
             </Grid >
-            <Vision />
-            <ContentSlider />
-            <ActionAreaCard />
+            {/* <Vision /> */}
+            <ProjectPortfolio />
+            {/* <UseCases /> */}
             <Layer />
             <Difference />
             <Video />

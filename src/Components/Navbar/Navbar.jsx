@@ -19,20 +19,14 @@ import { useTheme } from "@emotion/react";
 import Dropdown from "./Dropdown";
 
 const pages = ['Products', 'Usecases', 'About'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const toolbarStyle = {
+    // border: '2px solid red',
     display: 'flex',
-    justifyContent: 'space-between',
-    padding: '0 1.5rem',
-    width: '65%',
-    position: 'absolute',
-    top: '2rem',
-    transform: 'translate(25%)',
+    width: '100%',
     margin: 'auto',
-    background: 'white',
-    borderRadius: '1rem',
-    boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+    background: 'var(--bgColor)',
 }
 
 const logoStyle = {
@@ -47,121 +41,146 @@ const logoStyle = {
 function Navbar() {
     const theme = useTheme()
     const [anchorElNav, setAnchorElNav] = useState(null);
-    const [anchorElUser, setAnchorElUser] = useState(null);
-    const [isHover, setIsHover] = useState(false)
+    const open = Boolean(anchorElNav);
+    // const [anchorElUser, setAnchorElUser] = useState(null);
+    const [isHover, setIsHover] = useState(false);
+    const [navBtnClick, setNavBtnClick] = useState('')
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    // const handleOpenUserMenu = (event) => {
+    //     setAnchorElUser(event.currentTarget);
+    // };
+
+    // const handleCloseUserMenu = () => {
+    //     setAnchorElUser(null);
+    // };
 
     return (
         <AppBar position="static">
-            <Container maxWidth="xl" sx={{ position: 'relative' }}>
-                <Toolbar disableGutters sx={toolbarStyle}>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{ display: { xs: 'none', md: 'flex' }, ...logoStyle }}
-                    >
-                        LOGO
-                    </Typography>
+            {/* <Container maxWidth="xl"> */}
+            <Toolbar
+                disableGutters
+                onMouseLeave={() => {
+                    console.log("mouse leave")
+                    setIsHover(false);
+                    setNavBtnClick('');
+                    handleCloseNavMenu()
+                }}
+                sx={toolbarStyle}>
+                <Typography
+                    variant="h6"
+                    noWrap
+                    component="a"
+                    href="#app-bar-with-responsive-menu"
+                    sx={{ display: { xs: 'none', md: 'flex' }, ...logoStyle }}
+                >
+                    <img src="/logo.png" alt="" style={{
+                        height: '4rem',
+                        margin: '10px 3rem',
+                    }} />
+                </Typography>
 
-                    <Box sx={{
-                        flexGrow: 1,
-                        display: { xs: 'flex', md: 'none' }
-                    }}>
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center" color={theme.palette.secondary.main}>{page}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{ display: { xs: 'flex', md: 'none' }, ...logoStyle }}
+                <Box sx={{
+                    flexGrow: 1,
+                    display: { xs: 'flex', md: 'none' }
+                }}>
+                    <IconButton
+                        size="large"
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={handleOpenNavMenu}
+                        color="inherit"
                     >
-                        LOGO
-                    </Typography>
-                    <Box sx={{
-                        // border: '2px solid red',
-                        width: '40%',
-                        display: { xs: 'none', md: 'flex' },
-                        justifyContent: 'space-around'
-                    }}>
+                        <MenuIcon />
+                    </IconButton>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        sx={{
+                            display: { xs: 'block', md: 'none' },
+                        }}
+                    >
                         {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={() => {
-                                    if (page === 'Products') {
-                                        console.log("mouse enter");
-                                        setIsHover((prev) => !isHover);
-                                    }
-                                }}
-                                // onMouseEnter={() => {
-                                //     if (page === 'Products') {
-                                //         console.log("mouse enter");
-                                //         setIsHover(true);
-                                //     }
-                                // }}
-                                // onMouseLeave={() => {
-                                //     console.log("mouse leave")
-                                //     setIsHover(false);
-                                // }}
-                                sx={{ my: 2, color: theme.palette.primary.dark, display: 'block' }}
-                            >
-                                {page}
-                            </Button>
+                            <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <Typography textAlign="center" color={theme.palette.secondary.main}>{page}</Typography>
+                            </MenuItem>
                         ))}
-                    </Box>
-
+                    </Menu>
+                </Box>
+                <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                <Typography
+                    variant="h5"
+                    noWrap
+                    component="a"
+                    href="#app-bar-with-responsive-menu"
+                    sx={{ display: { xs: 'flex', md: 'none' }, ...logoStyle }}
+                >
+                    <img src="/logo.png" alt="" style={{
+                        height: '4rem',
+                        margin: '10px 3rem',
+                    }} />
+                </Typography>
+                <Box sx={{
+                    // border: '2px solid red',
+                    width: '40%',
+                    margin: 'auto',
+                    display: { xs: 'none', md: 'flex' },
+                    justifyContent: 'space-around'
+                }}>
+                    {pages.map((page) => (
+                        <Button
+                            id="basic-button"
+                            aria-controls={open ? 'basic-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            key={page}
+                            onClick={(event) => {
+                                if (page === 'Usecases') {
+                                    setNavBtnClick('Usecases');
+                                    handleOpenNavMenu(event);
+                                } else if (page === 'About') {
+                                    setNavBtnClick('About');
+                                    handleOpenNavMenu(event);
+                                } else if (page === 'Products') {
+                                    console.log("mouse enter");
+                                    setNavBtnClick('Products');
+                                    setIsHover((prev) => !isHover);
+                                }
+                            }}
+                            // onMouseEnter={() => {
+                            //     if (page === 'Products') {
+                            //         console.log("mouse enter");
+                            //         setIsHover(true);
+                            //     }
+                            // }}
+                            sx={{ my: 2, color: theme.palette.primary.light, display: 'block' }}
+                        >
+                            {page}
+                        </Button>
+                    ))}
+                </Box>
+                {/* 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
+                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                             </IconButton>
@@ -188,10 +207,17 @@ function Navbar() {
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box>
-                </Toolbar>
-                {isHover && <Dropdown />}
-            </Container>
+                    </Box> */}
+            </Toolbar>
+            {navBtnClick !== '' &&
+                <Dropdown
+                    navBtnClick={navBtnClick}
+                    anchorElNav={anchorElNav}
+                    handleOpenNavMenu={handleOpenNavMenu}
+                    handleCloseNavMenu={handleCloseNavMenu}
+                    open={open}
+                />}
+            {/* </Container> */}
         </AppBar >
     );
 }

@@ -1,0 +1,7 @@
+.projectDesc{
+    margin-left: 16px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}

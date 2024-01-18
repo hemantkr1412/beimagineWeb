@@ -1,6 +1,6 @@
-#about,
-#vision {
-    height: 5rem !important;
+#about{
+    height: 10rem;
+    margin-top:-5rem;
 }
 
 .imgContainer {

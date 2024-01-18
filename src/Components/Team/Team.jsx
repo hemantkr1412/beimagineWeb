@@ -8,7 +8,7 @@ import {
 3
 
 const sectionStyle = {
-    margin: '6rem 0'
+    margin: '8rem 0'
 }
 
 const Team = () => {
