@@ -1,5 +1,8 @@
 import { Inter } from 'next/font/google'
-import './globals.css'
+import './globals.css';
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap')
+</style>
 
 const inter = Inter({ subsets: ['latin'] })
 

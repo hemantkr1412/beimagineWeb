@@ -1,11 +1,13 @@
 :root {
-  --bgColor: #0E0E0E;
+  /* --bgColor: #0E0E0E; */
+  --bgColor: #111112;
   --footerBg: #000000;
-  --darkGrey: #F1F1F2;
+  --lightGrey: #F1F1F2;
   --softGreen: #71c391;
   --lightSteelBlue: #6492cc;
   --pinkish-purple: #913ac4;
   --inputTextColor: #bdbdbd;
+  --purpleGreenGradient: linear-gradient(90deg,#00e7e7,#8946df);
 }
 
 .layer2 {
@@ -42,6 +44,9 @@ body {
 body {
   background-color: var(--bgColor);
   color: white;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 a {

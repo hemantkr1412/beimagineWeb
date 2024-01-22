@@ -86,7 +86,7 @@ const Dropdown = ({
                 <Grid container spacing={2} sx={{
                     // border: '2px solid red',
                     height: '75vh',
-                    background: 'var(--darkGrey)',
+                    background: 'var(--lightGrey)',
                     pt: 4,
                     width: '55%',
                     padding: '1rem',
@@ -94,6 +94,7 @@ const Dropdown = ({
                     top: '6rem',
                     transform: 'translate(40%)',
                     borderRadius: '1rem',
+                    zIndex: 100,
                 }}>
                     <Grid item xs={4} sx={{
                         // border: '2px solid blue',
@@ -109,8 +110,8 @@ const Dropdown = ({
                                         alignItems="flex-start"
                                         sx={{
                                             "& .MuiListItemText-secondary": { marginTop: '4px' },
-                                            backgroundImage: index === 0 && !hoveredProduct
-                                                && 'linear-gradient(to right, var(--softGreen), var(--lightSteelBlue))',
+                                            background: index === 0 && !hoveredProduct
+                                                && 'var(--purpleGreenGradient)',
                                             color: index === 0 && !hoveredProduct &&
                                             {
                                                 color: 'white',
@@ -120,9 +121,7 @@ const Dropdown = ({
                                             },
                                             borderRadius: '4px',
                                             "&:hover": {
-                                                backgroundImage: index % 2
-                                                    ? 'linear-gradient(to right, var(--pinkish-purple), var(--lightSteelBlue))'
-                                                    : 'linear-gradient(to right, var(--softGreen), var(--lightSteelBlue))',
+                                                background: 'var(--purpleGreenGradient)',
                                                 color: 'white',
                                                 "& .MuiListItemText-secondary": {
                                                     color: 'white',
@@ -183,9 +182,15 @@ const Dropdown = ({
                         'aria-labelledby': 'basic-button',
                     }}
                 >
-                    <MenuItem onClick={handleCloseNavMenu}>Bitmemoir</MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>BitBhoomi</MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>BitDPP</MenuItem>
+                    <MenuItem onClick={handleCloseNavMenu}>
+                        <a href="#bitmemoir">Bitmemoir</a>
+                    </MenuItem>
+                    <MenuItem onClick={handleCloseNavMenu}>
+                        <a href="#bitbhoomi">BitBhoomi</a>
+                    </MenuItem>
+                    <MenuItem onClick={handleCloseNavMenu}>
+                        <a href="#bitdpp">BitDPP</a>
+                    </MenuItem>
                 </Menu>
             }
             {
@@ -199,9 +204,15 @@ const Dropdown = ({
                         'aria-labelledby': 'basic-button',
                     }}
                 >
-                    <MenuItem onClick={handleCloseNavMenu}>Team</MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>Roadmap</MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>Contact</MenuItem>
+                    <MenuItem onClick={handleCloseNavMenu}>
+                        <a href="#team">Team</a>
+                    </MenuItem>
+                    <MenuItem onClick={handleCloseNavMenu}>
+                        <a href="#roadmap">Roadmap</a>
+                    </MenuItem>
+                    <MenuItem onClick={handleCloseNavMenu}>
+                        <a href="#contact">Contact</a>
+                    </MenuItem>
                 </Menu>
             }
         </>

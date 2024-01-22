@@ -37,7 +37,10 @@ const imgContainer = {
 const HomePage = () => {
     return (
         <>
-            <Grid container spacing={2} sx={{marginTop:'-4rem'}}>
+            <Grid container spacing={2} sx={{ 
+                marginTop: '-4rem',
+                background:'url(/bg.jpg) center center/cover no-repeat'
+                 }}>
                 <Grid item xs={7} sx={{ height: '100vh' }}>
                     <Box sx={contentBox}>
                         {/* <Typography variant="h3" gutterBottom>
@@ -45,20 +48,20 @@ const HomePage = () => {
                             with Blockchain
                         </Typography> */}
                         <Typography variant="h6" gutterBottom>
-                        Our vision is to pioneer the next frontier of technological evolution by designing revolutionary blockchain-based products. We are committed to crafting solutions that transcend imagination, addressing real-world challenges with innovation, transparency, and a commitment to creating lasting positive impact.
+                            Our vision is to pioneer the next frontier of technological evolution by designing revolutionary blockchain-based products. We are committed to crafting solutions that transcend imagination, addressing real-world challenges with innovation, transparency, and a commitment to creating lasting positive impact.
                         </Typography>
-                        <Button variant='contained' sx={{ mt: 2 }}>Learn more</Button>
+                        <Button variant='contained' sx={{mt: 2}}>Learn more</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={5} sx={imgContainer}>
-                    <Box sx={{ height: '60%', width: '65%' }}>
+                    {/* <Box sx={{ height: '60%', width: '65%' }}>
                         <img
                             src="/assets/home/img3.gif"
                             alt="Your GIF description"
                             width="100%"
                             height="100%"
                         />
-                    </Box>
+                    </Box> */}
                 </Grid>
             </Grid >
             {/* <Vision /> */}
@@ -67,7 +70,7 @@ const HomePage = () => {
             <Layer />
             <Difference />
             <Video />
-            <ClientContainer/>
+            <ClientContainer />
             <Team />
             <Contact />
         </>

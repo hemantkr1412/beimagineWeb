@@ -9,12 +9,16 @@ import './Contact.css';
 const Contact = () => {
     return (
         <>
-            <Typography variant='h3' sx={{ textAlign: 'center', marginTop:'5%' }}>Feel free to reach out to us</Typography>
+            <Typography variant='h3' id="contact" sx={{
+                fontWeight: 'bold',
+                textAlign: 'center',
+                marginTop: '5%'
+            }}>Feel free to reach out to us</Typography>
             <Grid container>
                 <Grid xs={4}></Grid>
                 <Grid xs={4}>
                     <form>
-                    <Typography variant="h4" className='heading'>Contact us</Typography>
+                        <Typography variant="h4" className='heading'>Contact us</Typography>
                         <TextField
                             id="outlined-basic"
                             placeholder="Name"

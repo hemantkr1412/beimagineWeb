@@ -13,7 +13,7 @@ const sectionStyle = {
 
 const Team = () => {
     return (
-        <section style={sectionStyle}>
+        <section style={sectionStyle} id="team">
             <Typography variant='h2' sx={{
                 textAlign: 'center',
                 my: 4

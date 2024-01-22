@@ -1,0 +1,14 @@
+.navbar .navBtn {
+    display: flex;
+    /* font-family: 'WorkSans, Helvetica, sans-serif;'; */
+    font-weight: 700;
+    color:grey;
+}
+.navbar .navBtn:hover {
+    color:white;
+}
+
+.navbar .navBtn span {
+    display: inline;
+    margin-top: 6px;
+}

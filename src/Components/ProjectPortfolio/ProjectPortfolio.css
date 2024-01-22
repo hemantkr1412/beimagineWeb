@@ -5,3 +5,14 @@
     flex-direction: column;
     gap: 6px;
 }
+
+/* USECASES */
+
+.productSection .useCasesHeading {
+    text-align: center;
+    font-weight: bold;
+    background: var(--purpleGreenGradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}

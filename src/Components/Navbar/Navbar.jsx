@@ -15,8 +15,10 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useTheme } from "@emotion/react";
 import Dropdown from "./Dropdown";
+import "./Navbar.css";
 
 const pages = ['Products', 'Usecases', 'About'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -24,8 +26,10 @@ const pages = ['Products', 'Usecases', 'About'];
 const toolbarStyle = {
     // border: '2px solid red',
     display: 'flex',
+    justifyContent: "space-around",
     width: '100%',
-    margin: 'auto',
+    padding: '1rem 0',
+    // margin: 'auto',
     background: 'var(--bgColor)',
 }
 
@@ -54,6 +58,14 @@ function Navbar() {
         setAnchorElNav(null);
     };
 
+    const handleScroll = () => {
+        document.addEventListener('scroll', () => {
+            setNavBtnClick('')
+        })
+    }
+    handleScroll();
+
+
     // const handleOpenUserMenu = (event) => {
     //     setAnchorElUser(event.currentTarget);
     // };
@@ -63,16 +75,10 @@ function Navbar() {
     // };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" className="navbar">
             {/* <Container maxWidth="xl"> */}
             <Toolbar
                 disableGutters
-                onMouseLeave={() => {
-                    console.log("mouse leave")
-                    setIsHover(false);
-                    setNavBtnClick('');
-                    handleCloseNavMenu()
-                }}
                 sx={toolbarStyle}>
                 <Typography
                     variant="h6"
@@ -141,13 +147,17 @@ function Navbar() {
                 </Typography>
                 <Box sx={{
                     // border: '2px solid red',
-                    width: '40%',
-                    margin: 'auto',
+                    width: '50%',
+                    // margin: 'auto',
                     display: { xs: 'none', md: 'flex' },
-                    justifyContent: 'space-around'
+                    justifyContent: 'center',
+                    gap: '3rem'
                 }}>
                     {pages.map((page) => (
                         <Button
+                            variant="text"
+                            endIcon={<KeyboardArrowDownIcon />}
+                            className="navBtn"
                             id="basic-button"
                             aria-controls={open ? 'basic-menu' : undefined}
                             aria-haspopup="true"

@@ -32,18 +32,30 @@ const theme = createTheme({
         {
           props: { variant: 'contained' },
           style: (theme) => ({
+            color: 'white',
             textTransform: 'none',
             fontSize: '1rem',
-            border: '2px solid #fafafa',
-            color: '#0E0E0E',
+            background: 'linear-gradient(90deg,#00e7e7,#8946df)',
+            border: '2px solid',
+            borderImage: 'linear-gradient(90deg, #00e7e7, #8946df)',
+            borderImageSlice: 1,
+            borderRadius: '4px',
             '&:hover': {
-              backgroundColor: '#0E0E0E',
-              color: '#fafafa',
               border: '2px solid #fafafa',
             },
           }),
         },
       ],
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            color:'white',
+            background: 'linear-gradient(90deg, #00e7e7, #8946df)',
+          },
+        },
+      },
     },
   },
 });
